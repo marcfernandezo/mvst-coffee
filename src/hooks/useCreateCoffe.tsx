@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useMemo, useCallback, FormEvent } from "react";
-import { supabase } from "@/lib/db";
 import { toast } from "sonner";
 import { TriangleAlert } from "lucide-react";
 import { mutate } from "swr";
+import { createClient } from "@/lib/db/client";
 
 type CoffeeType = "Arabic" | "Robusta";
 
@@ -26,6 +26,8 @@ export function useCreateCoffee() {
   const [image, setImage] = useState<File | null>(null);
   const [desc, setDesc] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const supabase = createClient()
 
   const isFormValid = useMemo(
     () => Boolean(name.trim() && price && type && image),

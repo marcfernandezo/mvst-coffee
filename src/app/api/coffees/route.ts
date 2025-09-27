@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/db";
+import { createClient } from "@/lib/db/client";
 
 /**
  * Types for Coffee records
@@ -39,6 +39,8 @@ function handleError(error: unknown, context: string) {
  * Fetch all coffee records
  */
 export async function GET() {
+  const supabase = createClient()
+
   try {
     const { data, error } = await supabase.from("coffees").select("*");
 
@@ -55,6 +57,8 @@ export async function GET() {
  * Create a new coffee record
  */
 export async function POST(req: NextRequest) {
+  const supabase = createClient()
+
   try {
     const body = (await req.json()) as CoffeeInsert;
     const { name, type, price, image, description } = body;

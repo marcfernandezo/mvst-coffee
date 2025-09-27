@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/db";
+import { createClient } from "@/lib/db/client";
 
 interface UploadResponse {
   url: string;
@@ -10,6 +10,8 @@ interface UploadResponse {
  * Upload a new coffee image to Database
  */
 export async function POST(req: Request) {
+  const supabase = createClient()
+
   try {
     const formData = await req.formData();
     const file = formData.get("file");
