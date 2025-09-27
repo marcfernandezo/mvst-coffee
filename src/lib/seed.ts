@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/db";
+import { createClient } from "@/lib/db/client";
 
 interface Coffee {
   id: number;
@@ -62,6 +62,8 @@ const coffees: Coffee[] = [
 ];
 
 async function seedCoffees() {
+
+  const supabase = createClient()
   console.log("[lOG]: Starting seed for coffees...");
 
   const { error } = await supabase
