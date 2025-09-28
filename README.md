@@ -12,8 +12,7 @@ This project is a **fullstack coffee application** that allows users to view and
 - [Tech Stack](#tech-stack)  
 - [Architecture & Design Decisions](#architecture--design-decisions)  
 - [Setup & Running the Project](#setup--running-the-project)  
-- [Tasks Implemented](#tasks-implemented)  
-- [Extra Features](#extra-features)  
+- [Future Improvements](#future-improvements)  
 - [Feedback](#feedback)  
 
 ---
@@ -126,3 +125,69 @@ pnpm install
 pnpm run seed
 pnpm run dev
 ````
+
+### Testing
+
+This project includes a robust testing and code quality setup to ensure reliability and maintainability:
+
+- **ESLint & Prettier**  
+  Enforces consistent code style and catches potential errors early during development.
+- **TypeScript**  
+  Provides static type checking to reduce runtime errors and improve developer confidence.
+
+## Future Improvements / What I Would Do With More Time
+
+While the application fulfills all the core requirements of the MVST coding challenge, given more time, I would focus on enhancing **functionality, scalability, and user experience**. Below are the key areas I would prioritize:
+
+### 1. Advanced Features for Coffee Management
+- **Edit & Delete Coffee Items**  
+  Implement the ability to edit existing entries and delete coffees, with confirmation modals to prevent accidental changes.
+- **Categorization & Filtering**  
+  Enable filtering or sorting coffee items by type, roast level, or flavor profile for easier navigation.
+- **Search Functionality**  
+  Add a search bar with debounced input for quickly finding specific coffee items.
+
+### 2. User Accounts & Personalization
+- **Authentication & Authorization**  
+  Introduce Supabase Authentication so that only logged-in users can add, edit, or delete coffee items.
+- **User Preferences**  
+  Save user-specific preferences such as favorite coffees, recent searches, and custom notes for each coffee.
+
+### 3. Enhanced UI/UX
+- **Improved Animations**  
+  Extend the use of Framer Motion for smooth page transitions and interactive hover effects.
+- **Responsive Design Improvements**  
+  Fine-tune mobile and tablet layouts for a fully optimized cross-device experience.
+- **Theme Switch**  
+  Implement a toggleable dark/light mode using TailwindCSS and Next-Themes JavaScript library.
+
+### 4. Performance & Scalability
+- **Pagination & Infinite Scroll**  
+  Implement server-side pagination or infinite scrolling for large coffee catalogs.
+- **Optimized API & Caching**  
+  Leverage stale-while-revalidate caching and possibly edge functions for faster API responses.
+
+### 5. Testing & Reliability
+- **Unit & Integration Tests**  
+  Add tests using Jest and React Testing Library to ensure reliability and prevent regressions.
+- **End-to-End Testing**  
+  Use Cypress or Playwright to validate critical user flows, such as adding a coffee or fetching the coffee list.
+
+### 6. Analytics & Insights
+- **Usage Tracking**  
+  Integrate analytics to track user interactions, popular coffees, and new item additions.
+- **Admin Dashboard**  
+  Build a lightweight dashboard for monitoring coffee statistics, user activity, and app health.
+
+
+## Feedback
+
+Working on this challenge was an exciting opportunity to combine frontend and backend development in a fullstack application. 
+
+- Gaining deeper familiarity with **Next.js App Router** and server-client integration.
+- Designing a clean **component-based frontend** with TailwindCSS and Shadcn/UI for a polished, Figma-accurate interface.
+- Implementing a **persistent backend** with Supabase/PostgreSQL and ensuring data validation and integrity.
+- Learning to prioritize **scalability, maintainability, and UX consistency** under time constraints.
+- Applying best practices for **modern fullstack development**, including SWR for reactive data fetching and Framer Motion for micro-interactions.
+
+Overall, the challenge was very well-structured, and it provided freedom to make architectural decisions while following design specifications. The instructions were clear, and the Figma file was very helpful in guiding the UI development.
