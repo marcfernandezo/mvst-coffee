@@ -32,7 +32,7 @@ async function fetcher<T>(url: string): Promise<T> {
 // Helper to get full image URL (Supabase storage)
 function getCoffeeImageUrl(path: string) {
   if (path.startsWith("http")) return path;
-  return `https://jkiwvdrkrdjinhpvbqrx.supabase.co/storage/v1/object/public${
+  return `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public${
     path.startsWith("/") ? "" : "/"
   }${path}`;
 }
@@ -120,7 +120,7 @@ export default function CoffeeList() {
 
       {/* Error Handling */}
       {error && (
-        <p className="text-center text-red-500 mt-8">
+        <p className="text-center text-red-400 mt-8">
           Failed to load coffees. Please try again later.
         </p>
       )}

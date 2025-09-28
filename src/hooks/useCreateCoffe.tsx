@@ -57,7 +57,7 @@ export function useCreateCoffee() {
         return;
       }
 
-      // 🔒 Image validations
+      // Image validations
       if (image.size > MAX_IMAGE_SIZE_MB * 1024 * 1024) {
         toast.error(`Image too large. Max ${MAX_IMAGE_SIZE_MB}MB allowed.`);
         return;

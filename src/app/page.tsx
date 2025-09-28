@@ -7,18 +7,18 @@ import CreateCoffee from "@/components/CreateCoffe";
 
 export default function HomeRoute() {
   return (
-    <section className="relative h-screen w-full bg-black text-white">
+    <section className="relative h-screen w-full text-white">
       {/* MVST Header Coffe Backgroudn */}
       <Image
         src="/background-header.webp"
         alt="MVST Header Background"
         fill
-        className="object-cover"
+        className="object-cover object-center"
         priority
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/10" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full px-12 py-8">

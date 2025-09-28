@@ -7,30 +7,25 @@ const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "MVST Coffee | Exclusive Roasted Coffee",
-  description: "Discover and create exclusive Arabica and Robusta blends.",
+  description: "Discover and create exclusive Arabica and Robusta blends at MVST.",
   keywords: ["coffee", "arabica", "robusta", "roasted coffee", "MVST"],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     type: "website",
-    url: "https://mvst-coffee.vercel.app",
+    url: "https://mvst-coffee-marc.vercel.app",
     title: "MVST Coffee",
-    description: "Discover and create exclusive Arabica and Robusta blends.",
+    description: "Discover and create exclusive Arabica and Robusta blends at MVST.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/mvst_logo.webp",
         width: 1200,
         height: 630,
         alt: "MVST Coffee - Exclusive Roasted Coffee",
       },
     ],
     locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@mvst",
-    images: ["/og-image.png"],
-  },
+  }
 };
 
 export default function RootLayout({
